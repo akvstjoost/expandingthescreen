@@ -28,7 +28,7 @@ void loop() {
   if (rx.header == 0x0B) { // control change
     if (rx.byte2 >= 2 && rx.byte2 <= 13) {
       if (rx.byte2 == 9) {
-        servo.write(map(rx.byte3, 0, 127, 0, 180));
+        servo.write(map(rx.byte3, 0, 127, 180, 0));
       }
       else {
         digitalWrite(rx.byte2, rx.byte3);
