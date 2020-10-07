@@ -41,5 +41,7 @@ void loop() {
     int value = map(analogRead(n + 18), 0, 1023, 0, 127); //A0-A5 are on pin 18-23. scale value to range 0-127
     controlChange(0, n, value);
   }
+  
+  //wait
   delay(10);
 }
